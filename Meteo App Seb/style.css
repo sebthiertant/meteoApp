@@ -1,0 +1,292 @@
+/* reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "SF Pro Display";
+    color: #fff;
+}
+
+
+/* reset  */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    height: 1000px;
+    background-image: url(/ressources/Background.png);
+}
+
+
+/* Topbar with research  */
+
+.topBar {
+    height: 200px;
+    background-image: url(/ressources/Top-bar.png);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #fff;
+}
+
+.city {
+    outline: none;
+    width: 350px;
+    height: 60px;
+    border-radius: 25px;
+    border: solid 1px #fff;
+    background-color: #427a93;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.wen {
+    background-image: url(/ressources/wen.png);
+    height: 25px;
+    width: 25px;
+    transform: scale(0.7);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    cursor: pointer;
+    margin-right: 300px;
+}
+
+
+/* Topbar with research  */
+
+
+/* main block of the app with the main infos */
+
+.containerMain {
+    display: flex;
+    height: 400px;
+}
+
+.containerInfos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.name {
+    margin-top: -100px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.temperature {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.lastUpdate {
+    font-size: 12px;
+}
+
+.containerWeather {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather {
+    margin-top: -100px;
+    margin-right: 100px;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.containerLine {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* main block of the app with the main infos */
+
+
+/* white design lines  */
+
+.lineX {
+    height: 0px;
+    width: 600px;
+    border: solid 1px #fff;
+    position: fixed;
+}
+
+.lineY {
+    height: 300px;
+    width: 0;
+    border: solid 1px #fff;
+    position: fixed;
+}
+
+
+/* white design lines */
+
+
+/* container of the bottom grid with all the icons and containers */
+
+.containerGrid {
+    height: 600px;
+    margin-top: -550px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+
+/* right block of the grid  */
+
+.containerRightBlock {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerWind,
+.containerHumidity,
+.containerSunrise,
+.containerSunset {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.windLogo {
+    height: 110px;
+    width: 90px;
+    background: url(/ressources/wind.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wind {
+    padding-right: 60px;
+    padding-left: 30px;
+}
+
+.containerHumidity {
+    padding: 20px;
+}
+
+.humidityLogo {
+    width: 40px;
+    height: 50px;
+    background-image: url(/ressources/humidity.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 105px;
+}
+
+.humidity {
+    padding-left: 20px;
+}
+
+
+/* left block of the grid  */
+
+.containerLeftBlock {
+    margin-left: -75px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerSunrise,
+.containerSunset {
+    flex-direction: row-reverse;
+    margin-top: -30px;
+}
+
+.containerSunset {
+    margin-top: -65px;
+}
+
+.sunriseLogo {
+    width: 160px;
+    height: 160px;
+    background-image: url(/ressources/sunrise.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sunrise {
+    padding-left: 15px;
+}
+
+.sunsetLogo {
+    width: 184px;
+    height: 184px;
+    background-image: url(/ressources/sunset.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.containerCredits {
+    margin-top: -280px;
+    padding-right: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 15px;
+    justify-content: flex-end;
+}
+
+
+/* setup des animations pour les transitions d'apparitions des blocs données */
+
+@keyframes transitionData {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* setup des animations pour les transitions d'apparitions des blocs données */
+
+
+/* classe pour le hide (pour la première entrée)  et le visible pour l'animation lors des autres requêtes*/
+
+.hide {
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.visible {
+    animation-name: transitionData;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+
+/* classe pour le hide (pour la première entrée)  et le visible pour l'animation lors des autres requêtes*/

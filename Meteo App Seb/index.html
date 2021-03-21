@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/app.js" async></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap" rel="stylesheet" />
+    <title>App météo</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- top bar with research -->
+        <div class="topBar">
+            <div class="wen" onclick="buttonClickGET()"></div>
+            <input class="city" name="city" type="text" value="" maxlength="25" />
+        </div>
+
+        <!-- second block with the weather display  -->
+        <div class="containerMain hide">
+            <div class="containerInfos">
+                <div class="name"></div>
+                <div class="temperature"></div>
+                <div class="lastUpdate"></div>
+            </div>
+            <div class="containerWeather">
+                <div class="weather"></div>
+            </div>
+        </div>
+        <!-- other informations display  -->
+        <div class="containerOthers hide">
+            <div class="containerLine">
+                <div class="lineX"></div>
+                <div class="lineY"></div>
+            </div>
+            <div class="containerGrid">
+                <div class="containerRightBlock">
+                    <div class="containerWind">
+                        <div class="wind"></div>
+                        <div class="windLogo"></div>
+                    </div>
+                    <div class="containerHumidity">
+                        <div class="humidity"></div>
+                        <div class="humidityLogo"></div>
+                    </div>
+                </div>
+                <div class="containerLeftBlock">
+                    <div class="containerSunrise">
+                        <div class="sunrise"></div>
+                        <div class="sunriseLogo"></div>
+                    </div>
+                    <div class="containerSunset">
+                        <div class="sunset"></div>
+                        <div class="sunsetLogo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerCredits">
+            <p class="credits">Developped and designed by Sébastien Thiertant</p>
+        </div>
+    </div>
+</body>
+
+</html>
